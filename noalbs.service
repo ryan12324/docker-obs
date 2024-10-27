@@ -1,0 +1,12 @@
+[Unit]
+Description=NoALBS Service
+After=network.target
+
+[Service]
+ExecStart=/root/noalbs/noalbs
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

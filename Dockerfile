@@ -9,6 +9,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get clean -y
     
 ENV NOALBS_VERSION=v2.11.2
+COPY noalbs.service /etc/systemd/system/noalbs.service
 RUN wget https://github.com/NOALBS/nginx-obs-automatic-low-bitrate-switching/releases/download/${NOALBS_VERSION}/noalbs-${NOALBS_VERSION}-x86_64-unknown-linux-musl.tar.gz \
     && tar -xzf noalbs-${NOALBS_VERSION}-x86_64-unknown-linux-musl.tar.gz \
     && mkdir /root/noalbs \
