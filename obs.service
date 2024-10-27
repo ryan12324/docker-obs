@@ -1,0 +1,14 @@
+[Unit]
+Description=OBS Service
+After=display-manager.service  # This is usually the X11 service
+Wants=display-manager.service
+
+[Service]
+ExecStart=obs --disable-shutdown-check --disable-updater 
+Restart=always
+User=root
+Group=root
+Environment=DISPLAY=:0  # Adjust if necessary
+
+[Install]
+WantedBy=multi-user.target
