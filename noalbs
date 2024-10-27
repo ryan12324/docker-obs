@@ -1,0 +1,38 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          noalbs
+# Required-Start:    $local_fs $network $remote_fs $x11
+# Required-Stop:     $local_fs $network $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: NoALBS service
+# Description:       Starts the NoALBS service after X11
+### END INIT INFO
+
+case "$1" in
+    start)
+        echo "Starting noalbs..."
+        /root/noalbs/noalbs &
+        ;;
+    stop)
+        echo "Stopping noalbs..."
+        pkill -f noalbs
+        ;;
+    restart)
+        $0 stop
+        $0 start
+        ;;
+    status)
+        if pgrep -f noalbs > /dev/null; then
+            echo "NoALBS is running."
+        else
+            echo "NoALBS is not running."
+        fi
+        ;;
+    *)
+        echo "Usage: /etc/init.d/noalbs {start|stop|restart|status}"
+        exit 1
+        ;;
+esac
+
+exit 0
