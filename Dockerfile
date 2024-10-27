@@ -14,8 +14,8 @@ COPY obs /etc/init.d/obs
 RUN wget https://github.com/NOALBS/nginx-obs-automatic-low-bitrate-switching/releases/download/${NOALBS_VERSION}/noalbs-${NOALBS_VERSION}-x86_64-unknown-linux-musl.tar.gz \
     && tar -xzf noalbs-${NOALBS_VERSION}-x86_64-unknown-linux-musl.tar.gz \
     && mkdir /root/noalbs \
-    && mv noalbs-${NOALBS_VERSION}-x86_64-unknown-linux-musl/* /root/noalbs
-    && chmod +x /etc/init.d/obs
+    && mv noalbs-${NOALBS_VERSION}-x86_64-unknown-linux-musl/* /root/noalbs \ 
+    && chmod +x /etc/init.d/obs \
     && chmod +x /etc/init.d/noalbs
     
 
