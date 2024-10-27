@@ -16,7 +16,9 @@ RUN wget https://github.com/NOALBS/nginx-obs-automatic-low-bitrate-switching/rel
     && mkdir /root/noalbs \
     && mv noalbs-${NOALBS_VERSION}-x86_64-unknown-linux-musl/* /root/noalbs \ 
     && chmod +x /etc/init.d/obs \
-    && chmod +x /etc/init.d/noalbs
+    && chmod +x /etc/init.d/noalbs \
+    && update-rc.d obs defaults
+    && update-rc.d noalbs defaults
     
 
 RUN echo "?package(bash):needs=\"X11\" section=\"DockerCustom\" title=\"OBS Screencast\" command=\"obs --disable-shutdown-check --disable-updater \"" >> /usr/share/menu/custom-docker && update-menus
