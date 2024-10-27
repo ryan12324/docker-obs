@@ -2,10 +2,10 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/bandi13/docker-obs.svg?style=flat-square)](https://hub.docker.com/r/bandi13/docker-obs/)
 [![](https://images.microbadger.com/badges/image/bandi13/docker-obs.svg)](https://microbadger.com/images/bandi13/docker-obs "Get your own image badge on microbadger.com")
 
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoff.ee/bandi13)
 
 # Docker Open Broadcaster Software (OBS)
 This container is based on [bandi13/gui-docker](https://github.com/bandi13/gui-docker). The OBS is incorporated into the container and can be used to stream your desktop.
+Also contains noalbs for irl streamers
 
 Here is a screenshot:
 ![Alt](https://raw.githubusercontent.com/bandi13/docker-obs/master/screenshot.png "Example screenshot")
