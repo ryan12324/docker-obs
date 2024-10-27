@@ -17,7 +17,7 @@ RUN wget https://github.com/NOALBS/nginx-obs-automatic-low-bitrate-switching/rel
     && mv noalbs-${NOALBS_VERSION}-x86_64-unknown-linux-musl/* /root/noalbs \ 
     && chmod +x /etc/init.d/obs \
     && chmod +x /etc/init.d/noalbs \
-    && update-rc.d obs defaults
+    && update-rc.d obs defaults \
     && update-rc.d noalbs defaults
     
 
